@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 70px 50px 32px;
+}
+
+.header-wrapper {
+    display: flex;
+    gap: 59px;
+}
+
+.logo {
+    display: flex;
+    gap: 28px;
+}
+
+.primary_btn {
+    border: none;
+    background-color: white;
+}
+
+.search {
+    align-content: center;
+    position: relative;
+}
+
+.search input {
+    width: 830px;
+    border-radius: 22px;
+    border: none;
+    background: rgb(235, 235, 235);
+    height: 44px;
+    padding: 12px 0 12px 23px;
+}
+
+.search-btn {
+    border: none;
+    position: absolute;
+    display: flex;
+    top: 13px;
+    bottom: 12px;
+    right: 17px;
+}
+
+.user {
+    display: flex;
+    gap: 50px;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 90px;
+}
+
+.channel-icon {
+    display: flex;
+    gap: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: rgba(137, 137, 137, 1);
+}
+li {
+    margin-bottom: 29px;
+}
+
+li img {
+    margin-right: 13px;
+}
+
+.home {
+    color: rgba(255, 0, 0, 1);
+}
+
+.channels-videos {
+    display: flex;
+    flex-direction: column;
+}
+
+.videos {
+    display: flex;
+    gap: 40px;
+}
