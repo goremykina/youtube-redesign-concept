@@ -80,8 +80,12 @@
 
 .content-wrapper {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: auto auto;
     padding: 0 0 0 32px;
+}
+
+main {
+    overflow-x: hidden;
 }
 
 .main-container {
@@ -140,6 +144,7 @@ ul {
 /*}*/
 
 li a {
+    white-space: nowrap;
     text-decoration: none;
     color: rgba(137, 137, 137, 1);
     display: flex;
@@ -186,6 +191,10 @@ h2 {
 
 .video {
     position: relative;
+}
+
+.link-to-player {
+    text-decoration: none;
 }
 
 .time {
@@ -337,4 +346,45 @@ h4 {
     font-size: 16px;
     opacity: 60%;
     margin-bottom: 20px;
+}
+
+@media (max-width: 320px) {
+    .search, .sub-nav, .channels-videos, .wrapper, .footer, .primary_btn, .nav-container {
+        display: none;
+    }
+
+    .mob-mod {
+        display: flex;
+    }
+
+    .videos {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .icon-user, .mob-logo {
+        display: initial;
+    }
+
+    .icon-user img {
+        width: 30px;
+    }
+
+    .header-home-padding {
+        padding: 10px 16px 20px 16px;
+    }
+
+    .content-wrapper {
+        padding: 0 0 0 20px;
+    }
+
+    .main-container {
+        padding: 0;
+    }
+
+    .mob-img {
+        width: 288px;
+        height: 150px;
+    }
 }
