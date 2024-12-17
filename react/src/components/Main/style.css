@@ -1,0 +1,16 @@
+.app-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px 0 80px;
+    margin-top: -20px;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+}
+
+hr {
+    color: rgba(216, 216, 216, 0.5);
+    margin: 15px 0 38px 0;
+}

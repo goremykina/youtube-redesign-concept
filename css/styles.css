@@ -126,17 +126,19 @@ ul {
     font-size: 18px;
     font-weight: 700;
     line-height: 22.59px;
+    padding-top: 8px;
 }
 
 .sub-nav {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 .sub-nav-menu {
     gap: 23px;
     width: 159px;
+    padding-top: 12px;
 }
 
 /*.m-r {*/
@@ -221,8 +223,8 @@ h2 {
 
 .info-wrapper {
     display: flex;
-    font-size: 13px;
     justify-content: space-between;
+    font-size: 13px;
     color: rgba(194, 194, 194, 1);
     line-height: 16.32px;
 }
@@ -247,6 +249,7 @@ h2 {
     color: rgb(194, 194, 194);
     font-size: 16px;
     font-weight: 400;
+    padding-top: 45px;
 }
 
 .subscribe {
@@ -261,8 +264,7 @@ h2 {
 
 .channel-name-wrapper {
     display: flex;
-    align-items: center;
-    padding: 30px 0 20px 0;
+    padding: 23px 70px 20px 0;
     justify-content: space-between;
 }
 
@@ -285,7 +287,8 @@ h2 {
 .channel-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin-bottom: 61px;
+    margin-bottom: 51px;
+    padding-right: 152px;
 }
 
 .channel-nav-menu a {
@@ -331,6 +334,7 @@ h4 {
 .channel-info {
     display: flex;
     gap: 32px;
+    margin: auto;
 }
 
 .channel-description-wrapper {

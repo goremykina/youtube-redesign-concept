@@ -1,0 +1,27 @@
+.channel-wrapper {
+    display: flex;
+    gap: 300px;
+}
+
+.channel-wrapper-info {
+    display: flex;
+    gap: 12px;
+}
+
+.channelImg {
+    width: 80px;
+    height: 80px;
+}
+
+.published-data {
+    font-size: 13px;
+    color: rgba(194, 194, 194, 1);
+}
+
+.desctiption {
+    color: rgba(0, 0, 0, 1);
+    opacity: 60%;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 14px 0 15px 0;
+}

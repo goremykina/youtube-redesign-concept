@@ -1,0 +1,47 @@
+.video-player {
+    position: relative;
+}
+
+.video-player-wrapper {
+    padding: 0 33px 33px 33px;
+}
+
+.video-player-time {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 1297px;
+    top: 77%;}
+
+.progress-bar {
+    position: absolute;
+    top: 83%;}
+
+.videoplayer-likes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video-btn {
+    display: flex;
+    gap: 27px;
+    padding-left: 10px;
+}
+
+.left {
+    gap: 40px;
+}
+
+.video-btn button {
+    border: none;
+    background: none;
+}
+
+.video-btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 1297px;
+    position: absolute;
+    top: 87%;
+}
