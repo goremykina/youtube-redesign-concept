@@ -13,13 +13,63 @@ import subtitles from "../../../public/icon/Subtitles.svg"
 import settings from "../../../public/icon/Settings.svg"
 import wideScreen from "../../../public/icon/Size.svg"
 import fullScreen from "../../../public/icon/Full Screen.svg"
+
+import volumeMobile from "../../../public/icon/Volume-mob.svg"
+import timeMobileStart from "../../../public/icon/Time Mob Start.svg"
+import timeMobile from "../../../public/icon/Time-mob.svg"
+import progressBarContent from "../../../public/icon/Rectangle.svg"
+import pauseMobile from "../../../public/icon/Pause-mob.svg"
+import progressBarMobile from "../../../public/icon/Progress Bar Mob.svg"
+
+
 import "./style.css"
+import Button from "../Button/Button.jsx";
 
 export default function VideoPlayer() {
+    const videoBtnImg = [pause, next, volume]
+    const screenBtn = [subtitles, settings, wideScreen, fullScreen]
+
+    const videoBtnAlt = {
+        pause: "pause",
+        next: "next",
+        volume: "volume",
+    }
+
+    const screenBtnAlt = {
+        subtitles: "subtitles",
+        settings: "settings",
+        wideScreen: "wideScreen",
+        fullScreen: "fullScreen"
+    }
+
+    const getVideosButtons = (BtnImg, BtnAlt) => {
+        return BtnImg.map((button, index) => {
+            const keys = Object.keys(videoBtnAlt);
+            console.log(BtnAlt[keys[index]])
+            return {
+                image: button,
+                alt: BtnAlt[keys[index]]
+            };
+        });
+    }
+    const videosButtons = getVideosButtons(videoBtnImg, videoBtnAlt)
+    const screenButtons = getVideosButtons(screenBtn, screenBtnAlt)
+
     return (
         <div>
             <div className="video-player">
-                <img src={videoPlayer} alt="videoPlayer"></img>
+                <img className="video-player-background" src={videoPlayer} alt="videoPlayer"></img>
+                <div className="player-mob">
+                    <img src={progressBarContent} alt="progress-bar-content"></img>
+                    <div className="player-mob-img-wrapper">
+                        <img src={pauseMobile} alt="pauseMobile"></img>
+                        <img src={timeMobileStart} alt="startTime"></img>
+                        <img src={progressBarMobile} alt="progress"></img>
+                        <img src={timeMobile} alt="pause"></img>
+                        <img src={volumeMobile} alt="pause"></img>
+                    </div>
+                </div>
+
                 <div className="video-player-wrapper">
                     <div className="video-player-time">
                         <img src={startTime} alt="time"></img>
@@ -27,43 +77,39 @@ export default function VideoPlayer() {
                     </div>
 
                     <img className="progress-bar" src={progressBar} alt="progress"></img>
+
                     <div className="video-btn-wrapper">
                         <div className="video-btn left">
-                            <button>
-                                <img src={pause} alt="pause"></img>
-                            </button>
-                            <button>
-                                <img src={next} alt="next"></img>
-                            </button>
-                            <button>
-                                <img src={volume} alt="volume"></img>
-                            </button>
+                            {videosButtons.map((item, i) => {
+                                return (
+                                    <Button
+                                        key={i}
+                                        btnImg={item.image}
+                                        btnAlt={item.alt}
+                                    />)
+                            })}
                         </div>
                         <div className="video-btn">
-                            <button>
-                                <img src={subtitles} alt="subtitles"></img>
-                            </button>
-                            <button>
-                                <img src={settings} alt="settings"></img>
-                            </button>
-                            <button>
-                                <img src={wideScreen} alt="wide-screen"></img>
-                            </button>
-                            <button>
-                                <img src={fullScreen} alt="full-screen"></img>
-                            </button>
+                            {screenButtons.map((item, i) => {
+                                return (
+                                    <Button
+                                        key={i}
+                                        btnImg={item.image}
+                                        btnAlt={item.alt}
+                                    />)
+                            })}
                         </div>
                     </div>
                 </div>
             </div>
-            <h2>Dude You Re Getting A Telescope</h2>
+            <h2 className="video-player-title">Dude You Re Getting A Telescope</h2>
             <div className="videoplayer-likes">
-                <p>123k views</p>
-                <div>
+                <p className="view">123k views</p>
+                <div className="video-player-info-likes">
                     <img src={like} alt="likes"></img>
                     <img src={dislike} alt="dislike"></img>
                     <img src={share} alt="share"></img>
-                    <img src={more} alt="more"></img>
+                    <img className="more" src={more} alt="more"></img>
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@
     justify-content: space-between;
     padding: 0 70px 0 80px;
     margin-top: -20px;
+    overflow: hidden;
 }
 
 .app-container {
@@ -13,4 +14,18 @@
 hr {
     color: rgba(216, 216, 216, 0.5);
     margin: 15px 0 38px 0;
+}
+
+.mob-hr {
+    display: none;
+}
+
+@media (max-width: 320px) {
+    .mob-hr {
+        display: initial;
+    }
+
+    hr, .mob-hr {
+        margin: 20px 16px;
+    }
 }

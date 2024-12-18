@@ -10,6 +10,7 @@ export default function Main() {
                 <VideoPlayer/>
                 <hr></hr>
                 <Channel />
+                <hr className="mob-hr"></hr>
             </div>
             <NextVideos/>
         </div>

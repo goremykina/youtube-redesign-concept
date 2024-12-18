@@ -352,6 +352,10 @@ h4 {
     margin-bottom: 20px;
 }
 
+.footer-mob {
+    display: none;
+}
+
 @media (max-width: 320px) {
     .search, .sub-nav, .channels-videos, .wrapper, .footer, .primary_btn, .nav-container {
         display: none;
@@ -390,5 +394,21 @@ h4 {
     .mob-img {
         width: 288px;
         height: 150px;
+    }
+
+    .footer-mob {
+        /*display: block;*/
+
+        border: gray;
+        padding: 15px 45px;
+        background-color: wheat;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 10%;
+        width: 100%;
     }
 }

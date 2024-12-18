@@ -27,15 +27,14 @@ export default function NextVideos() {
     return (
         <div className="next-video-wrapper">
             <div className="next-video">
-                <h2>Next</h2>
+                <h2 className="next-video-title">Next</h2>
                 <div className="next-video-autoplay">
-                    <h3>Autoplay</h3>
+                    <h3 className="next-video-autoplay-title">Autoplay</h3>
                     <img src={knob} alt="play"></img>
                 </div>
             </div>
             <>
                 {videos.map((video, i) => {
-                    console.log(video)
                     return (
                         <Video
                             key={i}

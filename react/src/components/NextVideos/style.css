@@ -16,3 +16,13 @@
     align-items: end;
     gap: 29px;
 }
+
+.next-video-autoplay-title {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.next-video-title {
+    font-size: 36px;
+    color: rgba(25, 32, 44, 1);
+}

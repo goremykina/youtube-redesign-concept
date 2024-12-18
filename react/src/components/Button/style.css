@@ -8,9 +8,25 @@
     font-size: 16px;
 }
 
+.btn-subscribe::after {
+    content: "Subscribe 2.3m"
+}
+
 .btn-show {
     color: rgba(194, 194, 194, 1);
     border: none;
     background-color: white;
     font-size: 20px;
+}
+
+@media (max-width: 320px) {
+    .btn-subscribe {
+        background: none;
+        color: #FF0000;
+        width: 73px;
+    }
+
+    .btn-subscribe::after {
+        content: "Subscribe"
+    }
 }
