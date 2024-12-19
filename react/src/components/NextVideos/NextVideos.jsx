@@ -1,10 +1,10 @@
 import Video from "./Video/Video.jsx";
-import knob from "../../../public/icon/knob.svg"
+import knob from "/icon/knob.svg"
 import "./style.css"
-import first from "../../../public/icon/1.png"
-import second from "../../../public/icon/2.png"
-import third from "../../../public/icon/3.png"
-import fourth from "../../../public/icon/4.png"
+import first from "/icon/1.png"
+import second from "/icon/2.png"
+import third from "/icon/3.png"
+import fourth from "/icon/4.png"
 
 
 export default function NextVideos() {

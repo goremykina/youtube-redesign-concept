@@ -84,6 +84,22 @@
     padding: 0 0 0 32px;
 }
 
+.notification-icon {
+    display: inline-block;
+    position: relative;
+
+    &:after {
+        content: '3';
+        padding: 1px 5px;
+        background-color: red;
+        border-radius: 50%;
+        color: white;
+        position: absolute;
+        top: -5px;
+        right: -5px;
+    }
+}
+
 main {
     overflow-x: hidden;
 }
@@ -295,7 +311,21 @@ h2 {
     text-decoration: none;
     color: rgba(0, 0, 0, 1);
     font-size: 18px;
-    line-height: 22.59px;
+
+    &:first-child {
+        position: relative;
+        color: rgba(255, 0, 0, 1);
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: -10%;
+            bottom: -3px;
+            width: 120%;
+            height: 2px;
+            background-color: red;
+        }
+    }
 }
 
 .channel-nav-menu {
@@ -356,9 +386,35 @@ h4 {
     display: none;
 }
 
+.hidden {
+    display: none;
+    border: none;
+    background-color: white;
+}
+
+.hidden-arrow, .header-container-mobile {
+    display: none;
+}
+
+.mob-visible {
+    display: none;
+}
+
 @media (max-width: 320px) {
-    .search, .sub-nav, .channels-videos, .wrapper, .footer, .primary_btn, .nav-container {
+    .search, .sub-nav, .wrapper, .footer, .primary_btn, .nav-container, .channel-grid-recommended-list, .channel-info, .mob-hidden{
         display: none;
+    }
+
+    .channels-videos > .videos:not(.mobile-visible) {
+        display: none;
+    }
+
+    .channel-mobile {
+        padding: 0 16px 0 16px;
+    }
+
+    a.link-to-player > img:first-child {
+        width: 100%;
     }
 
     .mob-mod {
@@ -372,7 +428,7 @@ h4 {
     }
 
     .icon-user, .mob-logo {
-        display: initial;
+        display: block;
     }
 
     .icon-user img {
@@ -401,14 +457,109 @@ h4 {
 
         border: gray;
         padding: 15px 45px;
-        background-color: wheat;
+        background-color: white;
         display: flex;
         justify-content: space-between;
     }
 
     footer {
-        position: absolute;
-        bottom: 10%;
+        position: fixed;
+        bottom: 0;
         width: 100%;
     }
+
+    .channel-page {
+        padding: 0;
+    }
+
+    .bg-mob {
+        width: 320px;
+        height: 100px;
+    }
+
+    .hidden {
+        display: block;
+    }
+
+    .width {
+        width: 70px;
+        background: none;
+    }
+
+    .user {
+        gap: 24px !important;
+    }
+
+    .channel-grid {
+        padding-right: 0;
+        margin-bottom: 0;
+    }
+
+    .channel-name h2 {
+        font-size: 20px;
+    }
+
+    .channel-name-wrapper {
+        flex-direction: column;
+        padding: 0 0 0 16px;
+        margin-top: -50px;
+        gap: 20px;
+    }
+
+    .channel-icon-wrapper {
+        flex-direction: column;
+    }
+
+    .channel-nav-menu {
+        gap: 40px;
+        padding: 30px 35px 16px 18px;
+        margin: 0;
+    }
+
+    .channel-nav-menu a {
+        font-size: 14px;
+    }
+
+    nav a:nth-child(n+4) {
+        display: none;
+    }
+
+    .hidden-arrow {
+        display: initial;
+        width: 10px;
+    }
+
+    .header-container-mobile {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .header-container-mobile h3 {
+        font-size: 16px;
+        margin-right: 31px;
+    }
+
+    .header-channel-padding {
+        padding: 10px 16px 24px 16px;
+    }
+
+    .search-mob {
+        width: 19px;
+        margin-right: 36px;
+    }
+
+    .menu-mob {
+        height: 19px;
+    }
+
+    .subscribe {
+        width: 120px;
+        font-size: 12px;
+    }
+
+    .mob-visible {
+        display: initial;
+    }
+
 }

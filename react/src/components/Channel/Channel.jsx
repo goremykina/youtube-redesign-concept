@@ -1,4 +1,4 @@
-import channelImg from "../../../public/icon/channelName.png"
+import channelImg from "/icon/channelName.png"
 import Button from "../Button/Button.jsx";
 import "./style.css"
 

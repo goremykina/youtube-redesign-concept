@@ -8,6 +8,13 @@
 <body>
 <header>
   <div class="header-container header-channel-padding">
+    <div class="header-container-mobile">
+      <img class="header-logo" src="./icons/Logo-mob.svg" alt="logo-mobile">
+      <h3>Margaret Phelps</h3>
+      <img class="search-mob" src="icons/search.svg" alt="search">
+      <img class="menu-mob" src="icons/menu-mob.svg" alt="menu-mob">
+    </div>
+
     <div class="header-wrapper">
       <div class="logo">
         <button class="primary_btn" type="button">
@@ -16,11 +23,12 @@
         <button class="primary_btn" type="button">
           <img src="icons/logo.png" alt="logo">
         </button>
+
       </div>
       <div class="search">
         <form class="search">
           <input type="text" class="search__input" placeholder="Search">
-          <button class="search-btn " type="button">
+          <button class="search-btn" type="button">
             <img src="icons/search.svg" alt="search">
           </button>
         </form>
@@ -34,7 +42,9 @@
         <img src="icons/view.svg" alt="view">
       </button>
       <button class="primary_btn" type="button">
-        <img src="icons/notification.svg" alt="notification">
+        <span class="notification-icon">
+          <img src="icons/notification.svg" alt="notification">
+        </span>
       </button>
       <button class="primary_btn" type="button">
         <img src="icons/userIcon.png" alt="user">
@@ -42,7 +52,7 @@
     </div>
   </div>
 </header>
-<div class="content-wrapper">
+<div class="content-wrapper channel-page">
   <aside class="nav-container nav-container_padding">
     <nav class="nav-menu">
       <ul>
@@ -166,12 +176,13 @@
   <main>
     <div class="main-container">
       <div>
-        <img src="./img/background.png" alt="background">
+        <img class="bg-mob" src="./img/background.png" alt="background">
       </div>
       <div class="channel-name-wrapper">
         <div class="channel-icon-wrapper">
-          <button class="primary_btn" type="button">
-            <img src="icons/margaret.png" alt="channel">
+          <button class="primary_btn hidden width" type="button">
+            <img class="mob-visible" src="icons/70.svg" alt="channel">
+            <img class="mob-hidden" src="icons/margaret.png" alt="channel">
           </button>
           <div class="channel-name">
             <h2 class>Margaret Phelps</h2>
@@ -196,6 +207,7 @@
           <a href="home-page.html">
             <img src="icons/search.svg" alt="search">
           </a>
+          <img class="hidden-arrow" src="icons/Right%20Arrow.svg" alt="arror">
         </nav>
         <aside class="channel-grid-recommended-list">
           <h4>Recommended channel</h4>
@@ -238,7 +250,7 @@
             </button>
           </div>
         </div>
-        <div class="videos">
+        <div class="videos mobile-visible channel-mobile">
           <a class="video link-to-player" href="#">
             <img src="img/m-1.png" alt="video">
             <img class="time" src="icons/time/4.svg" alt="time">
@@ -322,5 +334,14 @@
     </div>
   </main>
 </div>
+
+<footer>
+  <div class="footer-mob">
+    <img src="icons/home.svg" alt="home">
+    <img src="icons/trending.svg" alt="home">
+    <img src="icons/subscriptions.svg" alt="home">
+    <img src="icons/library.svg" alt="home">
+  </div>
+</footer>
 </body>
 </html>

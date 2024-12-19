@@ -1,7 +1,14 @@
 @font-face {
     font-family: 'Mulish';
-    src: url("/react/public/fonts-react/Mulish-Regular.ttf") format('truetype');
+    src: url("/fonts/Mulish-Regular.ttf") format('truetype');
     font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('/fonts/Mulish-Bold.ttf') format('truetype');
+    font-weight: bold;
     font-style: normal;
 }
 

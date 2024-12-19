@@ -1,11 +1,11 @@
-import  '../../../../css/styles.css';
-import menu from "../../../../icons/menu.svg";
-import logoIcon from "../../../../icons/logo.png";
-import search from "../../../../icons/search.svg";
-import phone from "../../../../icons/phone-18.svg";
-import view from "../../../../icons/view.svg";
-import notifications from "../../../../icons/notification.svg";
-import userIcon from "../../../../icons/userIcon.png";
+import menu from "/icon/menu.svg";
+import logoIcon from "/icon/logo.png";
+import search from "/icon/search.svg";
+import phone from "/icon/phone-18.svg";
+import view from "/icon/view.svg";
+import notifications from "/icon/notification.svg";
+import userIcon from "/icon/userIcon.png";
+import  './styles.css';
 
 
 export default function Header() {
@@ -38,7 +38,9 @@ export default function Header() {
                         <img src={view} alt="view"/>
                     </button>
                     <button className="primary_btn" type="button">
-                        <img src={notifications} alt="notification"/>
+                        <span className="notification-icon">
+                            <img src={notifications} alt="notification"/>
+                        </span>
                     </button>
                     <button className="primary_btn icon-user" type="button">
                         <img src={userIcon} alt="user"/>
